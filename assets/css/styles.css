@@ -1,0 +1,8 @@
+/* assets/css/styles.css */
+
+/* Example: Setting a background image */
+.hero {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
