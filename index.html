@@ -1,117 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Primordial Groove - Find Your Tribe, Find Your Rhythm</title>
   <meta name="description" content="Join Primordial Groove, a collective space where art, music, and community thrive.">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- Include custom styles if applicable -->
+
+  <!-- Preconnect to Google Fonts for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Consolidate font requests to minimize HTTP requests -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="assets/css/tailwind.css" as="style">
+  <link href="assets/css/tailwind.css" rel="stylesheet">
+
+  <!-- Add meta tags for SEO -->
+  <meta name="keywords" content="Primordial Groove, community, art, music, events">
+  <meta name="author" content="Primordial Groove">
+
+  <!-- Open Graph meta tags for social sharing -->
+  <meta property="og:title" content="Primordial Groove - Find Your Tribe, Find Your Rhythm">
+  <meta property="og:description" content="Join Primordial Groove, a collective space where art, music, and community thrive.">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> <!-- Optional favicon -->
+  <style>
+    /* Inline critical CSS for faster load time */
+    .hidden {
+      display: none;
+    }
+
+    .block {
+      display: block;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <!-- Navigation -->
-  <nav class="bg-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-      <h1 class="text-2xl font-bold mb-4 md:mb-0">Primordial Groove</h1>
-      <div class="space-y-2 md:space-y-0 md:space-x-4">
-        <a href="index.html" class="text-gray-800 font-semibold hover:text-indigo-600 block md:inline-block">Home</a>
-        <a href="about.html" class="text-gray-800 font-semibold hover:text-indigo-600 block md:inline-block">About</a>
-        <a href="events.html" class="text-gray-800 font-semibold hover:text-indigo-600 block md:inline-block">Events</a>
-        <a href="contact.html" class="text-gray-800 font-semibold hover:text-indigo-600 block md:inline-block">Contact</a>
+
+<body class="bg-gray-100 text-gray-800 font-body">
+
+  <!-- Add 'aria-label' to improve accessibility -->
+  <nav aria-label="Main Navigation" class="navbar">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-heading">Primordial Groove</h1>
+      <!-- Mobile menu button with data attribute -->
+      <button class="mobile-menu-button" aria-label="Toggle navigation menu" data-toggle="mobile-menu">
+        <svg class="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <!-- Menu icon -->
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+          <!-- Close icon, hidden by default -->
+          <path id="close-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="display: none;"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <!-- Navigation menu -->
+      <div id="mobile-menu" class="navbar-menu md:flex space-y-4 md:space-y-0 md:space-x-6">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="bg-cover bg-center h-full md:h-screen" style="background-image: url('assets/images/hero.jpg');">
-    <div class="flex items-center justify-center h-full px-4">
-      <div class="text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Find Your Tribe, Find Your Rhythm</h2>
-        <p class="text-lg md:text-xl text-white mb-8">
-          A collective space where art, music, and community thrive. Join us as we push boundaries together.
-        </p>
-        <a href="#get-involved" class="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">
-          Join the Vibe
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section class="py-8 md:py-16">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">About Primordial Groove</h2>
-      <p class="text-base md:text-lg mb-8">
-        We are a community of artists, musicians, and free spirits who come together to create unforgettable experiences.
-        Our movement is about pushing boundaries and embracing creativity.
-      </p>
-      <a href="about.html" class="text-indigo-600 font-semibold hover:underline">Learn More &rarr;</a>
-    </div>
-  </section>
-
-  <!-- Upcoming Events Section -->
-  <section class="bg-gray-200 py-8 md:py-16">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Upcoming Events</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Event Card -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Event Name</h3>
-          <p class="mb-2">Date & Location</p>
-          <p class="mb-4">Description of the unique event experience.</p>
-          <a href="events.html" class="text-indigo-600 font-semibold hover:underline">Reserve Your Spot &rarr;</a>
+  <!-- Use 'main' element for the main content -->
+  <main>
+    <header class="hero">
+      <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover"
+        aria-label="Background video of an event">
+        <source src="assets/videos/event-highlights.mp4" type="video/mp4">
+        <img src="assets/images/Crowd/0Z7A0627-Enhanced-NR.jpg" alt="Crowd at Primordial Groove event"
+          class="absolute inset-0 w-full h-full object-cover">
+      </video>
+      <div class="relative flex items-center justify-center h-full px-4">
+        <div class="text-center">
+          <h1 class="typing-text">Find Your Tribe, Find Your Rhythm</h1>
+          <a href="about.html" class="btn-gradient mt-6"><span>Learn More</span></a>
         </div>
-        <!-- Repeat Event Cards as needed -->
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Get Involved Section -->
-  <section id="get-involved" class="py-8 md:py-16">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Join the Movement</h2>
-      <p class="text-base md:text-lg mb-8">
-        Become a part of Primordial Groove. Whether you're an artist, musician, or someone looking to be part of
-        something bigger, there's a place for you.
-      </p>
-      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-        <a href="signup.html" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-500">
-          Sign Up
-        </a>
-        <a href="contribute.html" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-500">
-          Share Your Art
-        </a>
-        <a href="volunteer.html" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-500">
-          Volunteer With Us
-        </a>
+    <section class="py-8 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="section-heading">About Primordial Groove</h2>
+        <p class="section-paragraph">
+          We are a community of artists, musicians, and free spirits who come together to create unforgettable
+          experiences.
+          Our movement is about pushing boundaries and embracing creativity.
+        </p>
+        <a href="about.html" class="text-primary font-semibold hover:underline">Learn More &rarr;</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-400 py-8">
+    <section class="py-8 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="section-heading">Event Gallery</h2>
+        <p class="section-paragraph">
+          Explore moments from our past events and see the vibrant community of Primordial Groove.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Ensure images have descriptive alt texts -->
+          <div class="gallery-image">
+            <img src="assets/images/Crowd/0Z7A0425-Enhanced-NR.jpg" alt="Community at a Primordial Groove event">
+          </div>
+          <!-- Repeat for other images -->
+        </div>
+        <a href="gallery.html" class="text-primary font-semibold hover:underline mt-4 block">View Full Gallery
+          &rarr;</a>
+      </div>
+    </section>
+
+    <section class="bg-gray-200 py-8 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="section-heading">Upcoming Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-2">Event Name</h3>
+            <p class="mb-2">Date & Location</p>
+            <p class="mb-4">Description of the unique event experience.</p>
+            <a href="events.html" class="text-accent font-semibold hover:underline">Reserve Your Spot &rarr;</a>
+          </div>
+          <!-- Repeat Event Cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <section id="get-involved" class="py-8 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="section-heading">Join the Movement</h2>
+        <p class="section-paragraph">
+          Become a part of Primordial Groove. Whether you're an artist, musician, or someone looking to be part of
+          something bigger, there's a place for you.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+          <a href="signup.html" class="btn-3d">Sign Up</a>
+          <a href="contribute.html" class="btn-3d">Share Your Art</a>
+          <a href="volunteer.html" class="btn-3d">Volunteer With Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add 'aria-label' to footer navigation -->
+  <footer class="footer">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col md:flex-row justify-between">
         <div class="mb-4 md:mb-0">
           <h3 class="text-white text-xl font-bold mb-2">Primordial Groove</h3>
           <p>&copy; 2023 Primordial Groove. All rights reserved.</p>
         </div>
-        <div class="space-y-2 md:space-y-0 md:space-x-4">
-          <a href="about.html" class="hover:text-white block md:inline-block">About</a>
-          <a href="events.html" class="hover:text-white block md:inline-block">Events</a>
-          <a href="contact.html" class="hover:text-white block md:inline-block">Contact</a>
-          <a href="faq.html" class="hover:text-white block md:inline-block">FAQs</a>
-        </div>
+        <nav aria-label="Footer Navigation">
+          <div class="space-y-2 md:space-y-0 md:space-x-4">
+            <a href="about.html" class="footer-link">About</a>
+            <a href="events.html" class="footer-link">Events</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="faq.html" class="footer-link">FAQs</a>
+          </div>
+        </nav>
       </div>
       <div class="mt-4">
         <p>Follow us on:</p>
         <div class="flex space-x-4">
-          <a href="#" class="hover:text-white">Instagram</a>
-          <a href="#" class="hover:text-white">Facebook</a>
-          <a href="#" class="hover:text-white">Twitter</a>
+          <a href="#" class="footer-link">Instagram</a>
+          <a href="#" class="footer-link">Facebook</a>
+          <a href="#" class="footer-link">Twitter</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Defer non-critical scripts for performance -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Custom script placed at the bottom of the body -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuButton = document.querySelector('[data-toggle="mobile-menu"]');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      menuButton.addEventListener('click', function () {
+        const isMenuOpen = mobileMenu.classList.toggle('hidden');
+        menuIcon.style.display = isMenuOpen ? 'block' : 'none';
+        closeIcon.style.display = isMenuOpen ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
+
 </html>

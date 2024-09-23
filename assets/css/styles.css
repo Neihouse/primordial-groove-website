@@ -1,8 +1,144 @@
 /* assets/css/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Example: Setting a background image */
-.hero {
-  background-image: url("../images/hero.jpg");
-  background-size: cover;
-  background-position: center;
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Permanent+Marker&display=swap");
+
+/* Base Layer */
+@layer base {
+  .font-heading {
+    font-family: "Permanent Marker", cursive;
+  }
+
+  .font-body {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* Components Layer */
+@layer components {
+  /* Hero Section Styling */
+  .hero {
+    @apply relative h-screen overflow-hidden;
+  }
+
+  .hero::before {
+    content: "";
+    @apply absolute inset-0 bg-black bg-opacity-50;
+  }
+
+  /* Button Gradient Hover Effect */
+  .btn-gradient {
+    @apply relative inline-block text-white font-bold py-3 px-6 rounded-full overflow-hidden;
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease;
+    background-image: linear-gradient(
+      90deg,
+      theme("colors.primary"),
+      theme("colors.accent"),
+      theme("colors.acid-green")
+    );
+  }
+
+  .btn-gradient:hover {
+    background-position: right center;
+  }
+
+  /* 3D Button Effects */
+  .btn-3d {
+    @apply inline-block bg-acid-green text-black font-bold py-3 px-6 rounded-full transition-transform duration-300;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+
+  .btn-3d:hover {
+    transform: scale(1.05);
+  }
+
+  /* Navigation Menu Styling */
+  .navbar {
+    @apply bg-black text-white fixed top-0 left-0 w-full z-50;
+  }
+
+  .navbar a {
+    @apply text-white font-semibold hover:text-acid-green transition-colors duration-300;
+  }
+
+  /* Footer Styling */
+  .footer {
+    @apply bg-black text-gray-400 py-8;
+  }
+
+  .footer a {
+    @apply hover:text-acid-green transition-colors duration-300;
+  }
+}
+
+/* Utilities Layer */
+@layer utilities {
+  /* Custom Image Styles */
+  .gallery-image img {
+    @apply w-full h-full object-cover transition-transform duration-500 ease-in-out;
+  }
+
+  .gallery-image:hover img {
+    @apply transform scale-110;
+  }
+
+  /* Section Headings */
+  .section-heading {
+    @apply font-heading text-3xl md:text-4xl font-extrabold mb-6 text-center;
+  }
+
+  /* Section Paragraph */
+  .section-paragraph {
+    @apply text-base md:text-lg mb-8 text-center;
+  }
+
+  /* Typing Text Effect */
+  .typing-text {
+    @apply inline-block text-white font-heading text-5xl whitespace-nowrap overflow-hidden border-r-4 border-white;
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  /* Adjustments for Fixed Navbar */
+  body {
+    @apply pt-20;
+  }
+
+  /* Ensure focus outlines are visible */
+  :focus {
+    outline: 2px dashed #b0fc38; /* Acid Green */
+    outline-offset: 4px;
+  }
+
+  /* Screen reader-only utility class */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Consistent styling for navigation links */
+  .nav-link {
+    @apply text-white font-semibold hover:text-acid-green transition-colors duration-300;
+  }
+
+  /* Consistent styling for footer links */
+  .footer-link {
+    @apply hover:text-acid-green transition-colors duration-300;
+  }
+
+  /* Add a utility class for hiding elements */
+  .hidden {
+    display: none;
+  }
 }
