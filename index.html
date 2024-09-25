@@ -4,196 +4,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primordial Groove - Find Your Tribe, Find Your Rhythm</title>
-  <meta name="description" content="Join Primordial Groove, a collective space where art, music, and community thrive.">
+  <title>Primordial Groove - SF Beats | No SF Streets</title>
+  <meta name="description"
+    content="Join Primordial Groove, the East Bay's underground movement where community, art, and music turn wild spaces and city streets into creative sanctuaries.">
 
-  <!-- Preconnect to Google Fonts for performance -->
+  <!-- Preconnect for faster loading of Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Consolidate font requests to minimize HTTP requests -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- Fonts for a gritty, authentic aesthetic -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
 
-  <!-- Preload critical CSS -->
-  <link rel="preload" href="assets/css/tailwind.css" as="style">
+  <!-- Tailwind CSS -->
   <link href="assets/css/tailwind.css" rel="stylesheet">
 
-  <!-- Add meta tags for SEO -->
-  <meta name="keywords" content="Primordial Groove, community, art, music, events">
+  <!-- SEO tags -->
+  <meta name="keywords"
+    content="Primordial Groove, East Bay underground, community events, DIY art, music collaboration, urban spaces, wild spaces">
   <meta name="author" content="Primordial Groove">
 
-  <!-- Open Graph meta tags for social sharing -->
-  <meta property="og:title" content="Primordial Groove - Find Your Tribe, Find Your Rhythm">
-  <meta property="og:description" content="Join Primordial Groove, a collective space where art, music, and community thrive.">
+  <!-- Open Graph tags for social media sharing -->
+  <meta property="og:title" content="Primordial Groove - SF Beats | No SF Streets">
+  <meta property="og:description"
+    content="Join the East Bay’s underground community as we transform wild spaces and city corners into creative hubs through music, art, and connection.">
   <meta property="og:image" content="assets/images/og-image.jpg">
   <meta property="og:url" content="https://yourwebsite.com">
   <meta property="og:type" content="website">
 
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> <!-- Optional favicon -->
-  <style>
-    /* Inline critical CSS for faster load time */
-    .hidden {
-      display: none;
-    }
-
-    .block {
-      display: block;
-    }
-  </style>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-body">
+<body class="bg-gray-900 text-gray-200 font-body">
 
-  <!-- Add 'aria-label' to improve accessibility -->
-  <nav aria-label="Main Navigation" class="navbar">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-2xl font-heading">Primordial Groove</h1>
-      <!-- Mobile menu button with data attribute -->
-      <button class="mobile-menu-button" aria-label="Toggle navigation menu" data-toggle="mobile-menu">
-        <svg class="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <!-- Menu icon -->
+  <!-- Navbar -->
+  <nav aria-label="Main Navigation" class="bg-gray-800">
+    <div class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-heading text-white">Primordial Groove</a>
+      <button class="md:hidden text-gray-200 hover:text-white focus:outline-none" aria-label="Toggle navigation menu"
+        data-toggle="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"></path>
-          <!-- Close icon, hidden by default -->
-          <path id="close-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="display: none;"
-            d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      <!-- Navigation menu -->
-      <div id="mobile-menu" class="navbar-menu md:flex space-y-4 md:space-y-0 md:space-x-6">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="events.html" class="nav-link">Events</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+      <div id="mobile-menu"
+        class="hidden md:flex space-y-4 md:space-y-0 md:space-x-6 mt-4 md:mt-0 flex-col md:flex-row items-center">
+        <a href="index.html" class="text-gray-200 hover:text-white">Home</a>
+        <a href="about.html" class="text-gray-200 hover:text-white">About</a>
+        <a href="events.html" class="text-gray-200 hover:text-white">Events</a>
+        <a href="contact.html" class="text-gray-200 hover:text-white">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Use 'main' element for the main content -->
-  <main>
-    <header class="hero">
-      <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover"
-        aria-label="Background video of an event">
-        <source src="assets/videos/event-highlights.mp4" type="video/mp4">
-        <img src="assets/images/Crowd/0Z7A0627-Enhanced-NR.jpg" alt="Crowd at Primordial Groove event"
-          class="absolute inset-0 w-full h-full object-cover">
-      </video>
-      <div class="relative flex items-center justify-center h-full px-4">
-        <div class="text-center">
-          <h1 class="typing-text">Find Your Tribe, Find Your Rhythm</h1>
-          <a href="about.html" class="btn-gradient mt-6"><span>Learn More</span></a>
-        </div>
-      </div>
-    </header>
+  <!-- Hero Section -->
+  <section class="relative bg-gray-900">
+    <div class="max-w-screen-xl mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl font-heading text-white mb-6">Find Your Tribe, Find Your Rhythm</h1>
+      <p class="text-lg text-gray-300 mb-8">
+        Join the East Bay’s underground community as we transform wild spaces and city corners into creative hubs through
+        music, art, and connection.
+      </p>
+      <a href="signup.html"
+        class="inline-flex items-center px-8 py-3 bg-primary text-white font-semibold rounded hover:bg-purple-700">
+        Get Involved
+      </a>
+    </div>
+    <!-- Hero Image -->
+    <div class="absolute inset-0 opacity-20">
+      <img src="assets/images/hero-image.jpg" alt="Community gathering with music and art"
+        class="w-full h-full object-cover">
+    </div>
+  </section>
 
-    <section class="py-8 md:py-16">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="section-heading">About Primordial Groove</h2>
-        <p class="section-paragraph">
-          We are a community of artists, musicians, and free spirits who come together to create unforgettable
-          experiences.
-          Our movement is about pushing boundaries and embracing creativity.
-        </p>
-        <a href="about.html" class="text-primary font-semibold hover:underline">Learn More &rarr;</a>
-      </div>
-    </section>
-
-    <section class="py-8 md:py-16">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="section-heading">Event Gallery</h2>
-        <p class="section-paragraph">
-          Explore moments from our past events and see the vibrant community of Primordial Groove.
-        </p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <!-- Ensure images have descriptive alt texts -->
-          <div class="gallery-image">
-            <img src="assets/images/Crowd/0Z7A0425-Enhanced-NR.jpg" alt="Community at a Primordial Groove event">
+  <!-- Features Section -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-heading text-white mb-8">What We Offer</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="mb-4 text-primary">
+            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19V6l-2 2m8 0l-2-2v13"></path>
+            </svg>
           </div>
-          <!-- Repeat for other images -->
+          <h3 class="text-xl font-bold text-white mb-2">Live Music Events</h3>
+          <p class="text-gray-400">Experience raw, unfiltered music from local artists in unconventional spaces.</p>
         </div>
-        <a href="gallery.html" class="text-primary font-semibold hover:underline mt-4 block">View Full Gallery
-          &rarr;</a>
-      </div>
-    </section>
-
-    <section class="bg-gray-200 py-8 md:py-16">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="section-heading">Upcoming Events</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h3 class="text-xl font-bold mb-2">Event Name</h3>
-            <p class="mb-2">Date & Location</p>
-            <p class="mb-4">Description of the unique event experience.</p>
-            <a href="events.html" class="text-accent font-semibold hover:underline">Reserve Your Spot &rarr;</a>
+        <!-- Feature 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="mb-4 text-primary">
+            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"></path>
+            </svg>
           </div>
-          <!-- Repeat Event Cards as needed -->
+          <h3 class="text-xl font-bold text-white mb-2">Art Collaborations</h3>
+          <p class="text-gray-400">Join forces with creatives to turn ordinary places into extraordinary experiences.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <div class="mb-4 text-primary">
+            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 7l6 6-6 6M21 7l-6 6 6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Community Building</h3>
+          <p class="text-gray-400">Connect with like-minded individuals and build lasting relationships.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="get-involved" class="py-8 md:py-16">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="section-heading">Join the Movement</h2>
-        <p class="section-paragraph">
-          Become a part of Primordial Groove. Whether you're an artist, musician, or someone looking to be part of
-          something bigger, there's a place for you.
-        </p>
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-          <a href="signup.html" class="btn-3d">Sign Up</a>
-          <a href="contribute.html" class="btn-3d">Share Your Art</a>
-          <a href="volunteer.html" class="btn-3d">Volunteer With Us</a>
+  <!-- Call to Action Section -->
+  <section class="py-16 bg-gradient-to-r from-purple-700 to-pink-500">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-heading text-white mb-4">Ready to Join the Movement?</h2>
+      <p class="text-lg text-gray-100 mb-8">
+        Be a part of something bigger. Together, we'll create unforgettable experiences.
+      </p>
+      <a href="signup.html"
+        class="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded hover:bg-gray-800">
+        Sign Up Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <h2 class="text-3xl font-heading text-white text-center mb-8">What Our Community Says</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <p class="text-gray-300 mb-4">
+            "Primordial Groove has changed the way I see community and art. It's raw, real, and exactly what the East Bay
+            needs."
+          </p>
+          <p class="text-primary font-bold">— Alex M.</p>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <p class="text-gray-300 mb-4">
+            "I've found my tribe here. The events are amazing, and the people are even better."
+          </p>
+          <p class="text-primary font-bold">— Jamie L.</p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Add 'aria-label' to footer navigation -->
-  <footer class="footer">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between">
+  <!-- Upcoming Events Section -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-heading text-white mb-8">Upcoming Events</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Event 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-white mb-2">Urban Beats Park Jam</h3>
+          <p class="text-gray-400 mb-2">April 10, Oakland Park</p>
+          <p class="text-gray-300 mb-4">Join us for a day of live music, street art, and community vibes.</p>
+          <a href="events.html" class="text-accent font-semibold hover:underline">Learn More &rarr;</a>
+        </div>
+        <!-- Event 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-white mb-2">Warehouse Art Collective</h3>
+          <p class="text-gray-400 mb-2">May 5, Berkeley Warehouse</p>
+          <p class="text-gray-300 mb-4">An immersive experience blending music, art, and performance.</p>
+          <a href="events.html" class="text-accent font-semibold hover:underline">Learn More &rarr;</a>
+        </div>
+        <!-- Event 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-white mb-2">Street Corner Sessions</h3>
+          <p class="text-gray-400 mb-2">June 12, Downtown Alameda</p>
+          <p class="text-gray-300 mb-4">Pop-up performances transforming everyday spaces.</p>
+          <a href="events.html" class="text-accent font-semibold hover:underline">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-8">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-4 md:mb-0">
-          <h3 class="text-white text-xl font-bold mb-2">Primordial Groove</h3>
+          <a href="index.html" class="text-xl font-heading text-white">Primordial Groove</a>
           <p>&copy; 2023 Primordial Groove. All rights reserved.</p>
         </div>
-        <nav aria-label="Footer Navigation">
-          <div class="space-y-2 md:space-y-0 md:space-x-4">
-            <a href="about.html" class="footer-link">About</a>
-            <a href="events.html" class="footer-link">Events</a>
-            <a href="contact.html" class="footer-link">Contact</a>
-            <a href="faq.html" class="footer-link">FAQs</a>
-          </div>
-        </nav>
-      </div>
-      <div class="mt-4">
-        <p>Follow us on:</p>
         <div class="flex space-x-4">
-          <a href="#" class="footer-link">Instagram</a>
-          <a href="#" class="footer-link">Facebook</a>
-          <a href="#" class="footer-link">Twitter</a>
+          <a href="https://facebook.com" class="text-gray-300 hover:text-white" aria-label="Facebook">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12C22 6.48 17.52 2 12 2S2 6.48 2 12c0 4.98 3.66 9.12 8.438 9.88v-6.99h-2.54v-2.89h2.54V9.71c0-2.5 1.492-3.89 3.777-3.89 1.094 0 2.238.194 2.238.194v2.47h-1.26c-1.243 0-1.628.772-1.628 1.562v1.88h2.773l-.443 2.89h-2.33v6.99C18.34 21.12 22 16.98 22 12z" />
+            </svg>
+          </a>
+          <a href="https://twitter.com" class="text-gray-300 hover:text-white" aria-label="Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22.46 6c-.77.34-1.6.57-2.46.68a4.27 4.27 0 001.88-2.36c-.83.5-1.75.86-2.72 1.06A4.26 4.26 0 0016.15 4c-2.37 0-4.29 1.93-4.29 4.29 0 .34.03.67.1 1C7.69 9.16 4.07 7.38 1.64 4.16c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6a4.23 4.23 0 01-1.94-.54v.05c0 2.08 1.48 3.82 3.45 4.21a4.3 4.3 0 01-1.93.07c.54 1.68 2.11 2.89 3.97 2.92A8.6 8.6 0 010 19.54a12.1 12.1 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2v-.56A8.77 8.77 0 0024 5.64a8.5 8.5 0 01-2.54.7z" />
+            </svg>
+          </a>
+          <a href="https://instagram.com" class="text-gray-300 hover:text-white" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.2c3.18 0 3.56.01 4.81.07 1.17.05 1.95.24 2.41.41.6.23 1.04.5 1.49.95.45.45.73.9.95 1.49.17.46.36 1.24.41 2.41.06 1.25.07 1.63.07 4.81s-.01 3.56-.07 4.81c-.05 1.17-.24 1.95-.41 2.41-.23.6-.5 1.04-.95 1.49-.45.45-.9.73-1.49.95-.46.17-1.24.36-2.41.41-1.25.06-1.63.07-4.81.07s-3.56-.01-4.81-.07c-1.17-.05-1.95-.24-2.41-.41-.6-.23-1.04-.5-1.49-.95-.45-.45-.73-.9-.95-1.49-.17-.46-.36-1.24-.41-2.41-.06-1.25-.07-1.63-.07-4.81s.01-3.56.07-4.81c.05-1.17.24-1.95.41-2.41.23-.6.5-1.04.95-1.49.45-.45.9-.73 1.49-.95.46-.17 1.24-.36 2.41-.41 1.25-.06 1.63-.07 4.81-.07m0-2.2C8.76 0 8.31 0 7.05.06c-1.64.07-2.78.34-3.77.72a6.26 6.26 0 00-2.25 1.5 6.26 6.26 0 00-1.5 2.25c-.38.99-.66 2.13-.72 3.77C.01 8.31 0 8.76 0 12s.01 3.69.06 4.95c.07 1.64.34 2.78.72 3.77a6.26 6.26 0 001.5 2.25 6.26 6.26 0 002.25 1.5c.99.38 2.13.66 3.77.72 1.26.06 1.71.06 4.95.06s3.69-.01 4.95-.06c1.64-.07 2.78-.34 3.77-.72a6.26 6.26 0 002.25-1.5 6.26 6.26 0 001.5-2.25c.38-.99.66-2.13.72-3.77.06-1.26.06-1.71.06-4.95s-.01-3.69-.06-4.95c-.07-1.64-.34-2.78-.72-3.77a6.26 6.26 0 00-1.5-2.25 6.26 6.26 0 00-2.25-1.5c-.99-.38-2.13-.66-3.77-.72C15.69.01 15.24 0 12 0z" />
+              <path
+                d="M12 5.8A6.2 6.2 0 105.8 12 6.2 6.2 0 0012 5.8m0-2.2a8.4 8.4 0 110 16.8 8.4 8.4 0 010-16.8zm6.72 2.1a1.44 1.44 0 11-1.44 1.44 1.44 1.44 0 011.44-1.44z" />
+              <circle cx="12" cy="12" r="3.2" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Defer non-critical scripts for performance -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-  <!-- Custom script placed at the bottom of the body -->
+  <!-- Alpine.js for mobile menu functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuButton = document.querySelector('[data-toggle="mobile-menu"]');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-      const closeIcon = document.getElementById('close-icon');
-
-      menuButton.addEventListener('click', function () {
-        const isMenuOpen = mobileMenu.classList.toggle('hidden');
-        menuIcon.style.display = isMenuOpen ? 'block' : 'none';
-        closeIcon.style.display = isMenuOpen ? 'none' : 'block';
-      });
-    });
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('mobileMenu', () => ({
+        open: false,
+        toggle() {
+          this.open = !this.open;
+          document.getElementById('mobile-menu').classList.toggle('hidden', !this.open);
+        }
+      }))
+    })
   </script>
+
 </body>
 
 </html>

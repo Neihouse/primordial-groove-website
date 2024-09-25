@@ -48,6 +48,11 @@ module.exports = {
                     '100%': { backgroundPosition: '0% 50%' },
                 },
             },
+            spacing: {
+                '18': '4.5rem',   // Adding custom spacing value
+                '22': '5.5rem',
+                '88': '22rem',
+            },
         },
     },
     plugins: [],
